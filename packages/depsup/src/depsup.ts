@@ -1,6 +1,6 @@
 import { existsSync } from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+
 
 import { getErrorMessage } from './lib/get-error-message.js';
 import { getWorkspaceProjectPaths } from './lib/get-workspace-project-paths.js';
@@ -23,12 +23,11 @@ interface DepsUpOptions {
  */
 export async function depsup(options: DepsUpOptions = {}): Promise<void> {
   const { yes = false } = options;
-  const $filename = fileURLToPath(import.meta.url);
-  const $dirname = path.dirname($filename);
-  logInfo($dirname);
+
+
 
   try {
-    const workspaceRoot = resolveWorkspaceRoot($dirname);
+    const workspaceRoot = resolveWorkspaceRoot(process.cwd());
     logInfo(`Resolved workspaceRoot: ${workspaceRoot}`);
     if (!workspaceRoot) {
       return logError('Workspace root could not be resolved.');
