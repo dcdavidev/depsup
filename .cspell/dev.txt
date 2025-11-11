@@ -1,9 +1,14 @@
 autodocs
+bunfig
+bunx
 commitlint
 czrc
 dcdavidev
+depsup
 dotlottie
 lottiefiles
 nonoctal
+polyrepo
 shadcn
 spellbookx
+unrs

@@ -1,0 +1,27 @@
+{
+  "name": "@dcdavidev/depsup",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "fast-glob": "^3.3.3",
+    "js-yaml": "^4.1.0",
+    "tslib": "^2.8.1"
+  },
+  "nx": {
+    "name": "depsup"
+  }
+}
