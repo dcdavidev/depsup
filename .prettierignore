@@ -1,4 +1,6 @@
 /.astro/
+/.codacy/
+/.gemini/
 /dist/
 /node_modules/
 

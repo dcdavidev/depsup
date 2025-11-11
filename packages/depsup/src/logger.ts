@@ -20,11 +20,8 @@ function logWithColor(
 ) {
   const label = labelBgColor(` ${levelLabel} `);
   const coloredMsg = msgColor(msg);
-  if (obj) {
-    console.log(label, coloredMsg, JSON.stringify(obj, null, 2));
-  } else {
-    console.log(label, coloredMsg);
-  }
+  const logArgs = obj ? [label, coloredMsg, obj] : [label, coloredMsg];
+  console.log(...logArgs);
 }
 
 /**

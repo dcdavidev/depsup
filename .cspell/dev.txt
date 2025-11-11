@@ -1,6 +1,7 @@
 autodocs
 bunfig
 bunx
+codacy
 commitlint
 czrc
 dcdavidev
