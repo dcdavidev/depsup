@@ -1,0 +1,9 @@
+autodocs
+commitlint
+czrc
+dcdavidev
+dotlottie
+lottiefiles
+nonoctal
+shadcn
+spellbookx

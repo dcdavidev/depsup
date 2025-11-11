@@ -25,6 +25,7 @@ node_modules
 !.vscode/extensions.json
 
 # misc
+/.codacy
 /.sass-cache
 /connect.lock
 /coverage
@@ -40,5 +41,10 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
+
+# General AI rules
 .cursor/rules/nx-rules.mdc
+
+#Ignore vscode AI rules
 .github/instructions/nx.instructions.md
+.github/instructions/codacy.instructions.md
