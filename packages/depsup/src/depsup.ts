@@ -1,7 +1,6 @@
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 
-
 import { getErrorMessage } from './lib/get-error-message.js';
 import { getWorkspaceProjectPaths } from './lib/get-workspace-project-paths.js';
 import { resolvePackageManager } from './lib/resolve-package-manager.js';
@@ -23,8 +22,6 @@ interface DepsUpOptions {
  */
 export async function depsup(options: DepsUpOptions = {}): Promise<void> {
   const { yes = false } = options;
-
-
 
   try {
     const workspaceRoot = resolveWorkspaceRoot(process.cwd());

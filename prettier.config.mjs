@@ -1,18 +1,6 @@
-import spellbookxConfig from '@spellbookx/prettier-config';
+import spellbookx from 'prettier-config-spellbookx';
 
-/**
- * @type {import("prettier").Config}
- */
-const config = {
-  ...spellbookxConfig,
-  overrides: [
-    {
-      files: ['.czrc'],
-      options: {
-        parser: 'json',
-      },
-    },
-  ],
+/** @type {import('prettier').Config} */
+export default {
+  ...spellbookx.base,
 };
-
-export default config;

@@ -1,3 +1,3 @@
 export default {
-  extends: ['@spellbookx/commitlint-config'],
+  extends: ['commitlint-config-spellbookx'],
 };
