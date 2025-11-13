@@ -1,6 +1,6 @@
 import { spawn, type SpawnOptions } from 'node:child_process';
 
-import { logError } from '../logger.js';
+import chalk from 'chalk';
 
 /**
  * Runs an Nx command.
@@ -23,7 +23,11 @@ export async function runNxCommand(
     const process = spawn(cmd, [...args, ...command], options);
 
     process.on('error', (error: Error) => {
-      logError(`Error running command: ${command.join(' ')}: ${error.message}`);
+      console.error(
+        chalk.red(
+          `Error running command: ${command.join(' ')}: ${error.message}`
+        )
+      );
       reject(error);
     });
 
@@ -34,7 +38,7 @@ export async function runNxCommand(
         const error = new Error(
           `Command '${command.join(' ')}' exited with code ${code}`
         );
-        logError(error.message);
+        console.error(chalk.red(error.message));
         reject(error);
       }
     });

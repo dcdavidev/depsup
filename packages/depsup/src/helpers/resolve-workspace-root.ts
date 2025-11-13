@@ -39,8 +39,6 @@ export function resolveWorkspaceRoot(cwd: string): string {
   }
 
   throw new Error(
-    `Workspace root not found: no directory contains a workspace marker or package.json and any of ${lockFilesNames.join(
-      ', '
-    )}`
+    `Workspace root not found: no directory contains a workspace marker or package.json and any of ${lockFilesNames.join(', ')}`
   );
 }

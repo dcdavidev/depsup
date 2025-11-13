@@ -1,12 +1,13 @@
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 
+import chalk from 'chalk';
+
 import {
   LOCK_FILE,
   lockFileToPackageManager,
   type PackageManager,
 } from '../consts.js';
-import { logWarn } from '../logger.js';
 
 /**
  * Detects the package manager used in the given directory by checking for known lock files.
@@ -27,6 +28,8 @@ export function resolvePackageManager(cwd: string): PackageManager {
     }
   }
 
-  logWarn('No package manager lock file found, falling back to `npm.');
+  console.warn(
+    chalk.yellow('No package manager lock file found, falling back to `npm.')
+  );
   return 'npm';
 }

@@ -6,6 +6,7 @@ import path from 'node:path';
  * @param workspaceRoot The root of the workspace.
  * @returns A promise that resolves with an array of absolute project paths.
  * @example
+ * getWorkspaceProjectPaths('/path/to/workspace');
  */
 export async function getWorkspaceProjectPaths(
   workspaceRoot: string

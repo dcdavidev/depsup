@@ -31,7 +31,7 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "depsup": "./dist/cli.js"
+    "depsup": "./dist/index.js"
   },
   "dependencies": {
     "chalk": "^5.6.2",
@@ -40,5 +40,17 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "targets": {
+      "dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "commands": [
+            "pnpm dlx tsx ./packages/depsup/src/index.ts"
+          ]
+        }
+      }
+    }
   }
 }
