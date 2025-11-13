@@ -28,7 +28,7 @@
     "@types/js-yaml": "^4.0.9",
     "@types/node": "24.10.1",
     "commitizen": "^4.3.1",
-    "commitlint-config-spellbookx": "^0.3.2",
+    "commitlint-config-spellbookx": "^0.4.0",
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "cspell": "^9.3.1",
     "cspell-config-spellbookx": "^0.3.2",

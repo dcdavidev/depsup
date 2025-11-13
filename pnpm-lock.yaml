@@ -48,8 +48,8 @@ importers:
         specifier: ^4.3.1
         version: 4.3.1(@types/node@24.10.1)(typescript@5.9.3)
       commitlint-config-spellbookx:
-        specifier: ^0.3.2
-        version: 0.3.2(@commitlint/cli@20.1.0(@types/node@24.10.1)(typescript@5.9.3))(@commitlint/config-conventional@20.0.0)(commitizen@4.3.1(@types/node@24.10.1)(typescript@5.9.3))(conventional-changelog-conventionalcommits@9.1.0)(cz-git@1.12.0)
+        specifier: ^0.4.0
+        version: 0.4.0(@commitlint/cli@20.1.0(@types/node@24.10.1)(typescript@5.9.3))(@commitlint/config-conventional@20.0.0)(commitizen@4.3.1(@types/node@24.10.1)(typescript@5.9.3))(conventional-changelog-conventionalcommits@9.1.0)(cz-git@1.12.0)
       conventional-changelog-conventionalcommits:
         specifier: ^9.1.0
         version: 9.1.0
@@ -2247,8 +2247,8 @@ packages:
     engines: {node: '>= 12'}
     hasBin: true
 
-  commitlint-config-spellbookx@0.3.2:
-    resolution: {integrity: sha512-/NG4smMOhl2chz3y4xnIMFNefQtkbRqiL8B1ixwBMZyaz4OtQI4Itoo0GBGR8uZDkD5d0qmRFYJw4YRUub11hw==}
+  commitlint-config-spellbookx@0.4.0:
+    resolution: {integrity: sha512-+OVbTcBRlLtgaw9PjNIRwv8Mxcg0DLrONwtu3/atXbsi/AHZLszBcZoH3d+g1mbRsmyxr5ZYkwn6lLvzFV2gHg==}
     peerDependencies:
       '@commitlint/cli': ^20.1.0
       '@commitlint/config-conventional': ^20.0.0
@@ -7572,7 +7572,7 @@ snapshots:
       - '@types/node'
       - typescript
 
-  commitlint-config-spellbookx@0.3.2(@commitlint/cli@20.1.0(@types/node@24.10.1)(typescript@5.9.3))(@commitlint/config-conventional@20.0.0)(commitizen@4.3.1(@types/node@24.10.1)(typescript@5.9.3))(conventional-changelog-conventionalcommits@9.1.0)(cz-git@1.12.0):
+  commitlint-config-spellbookx@0.4.0(@commitlint/cli@20.1.0(@types/node@24.10.1)(typescript@5.9.3))(@commitlint/config-conventional@20.0.0)(commitizen@4.3.1(@types/node@24.10.1)(typescript@5.9.3))(conventional-changelog-conventionalcommits@9.1.0)(cz-git@1.12.0):
     dependencies:
       '@commitlint/cli': 20.1.0(@types/node@24.10.1)(typescript@5.9.3)
       '@commitlint/config-conventional': 20.0.0

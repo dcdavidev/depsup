@@ -1,5 +1,8 @@
-| <img src="images/logo.png" alt="depsup logo" width="150" /> | <h1>depsup</h1><p>Update dependencies in every workspace, monorepo too!</p> |
-| ----------------------------------------------------------- | --------------------------------------------------------------------------- |
+<img alt="logo" src="./images/readme-banner.png" />
+
+# depsup
+
+A powerful CLI tool to update dependencies in Nx workspaces and monorepos automatically.
 
 ## Table of Contents
 
