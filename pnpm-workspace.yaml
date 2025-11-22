@@ -1,9 +1,9 @@
 packages:
-  - packages/*
-
+  - 'packages/*'
+  - 'libs/lib'
+  - 'apps/*'
 autoInstallPeers: true
-
 onlyBuiltDependencies:
   - '@swc/core'
-  - nx
-  - unrs-resolver
+  - 'nx'
+  - 'unrs-resolver'
