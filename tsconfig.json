@@ -5,6 +5,12 @@
   "references": [
     {
       "path": "./packages/depsup"
+    },
+    {
+      "path": "./libs/lib"
+    },
+    {
+      "path": "./apps/app"
     }
   ]
 }

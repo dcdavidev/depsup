@@ -19,9 +19,10 @@ A powerful CLI tool to update dependencies in Nx workspaces and monorepos automa
 - 📦 **Monorepo & Single-Package Support**: Updates dependencies in workspace root and all packages in `packages/` directory
 - 🎯 **Smart Package Manager Detection**: Automatically detects npm, pnpm, yarn, or bun based on lock files
 - 🔄 **Interactive Mode**: Choose which dependencies to update interactively (default)
-- ⚡ **Non-Interactive Mode**: Skip prompts and update all dependencies automatically with `-y` flag
+- ⚡ **Non-Interactive/CI Mode**: Skip prompts and update all dependencies automatically with `--ci` flag
 - 🔍 **Workspace Root Detection**: Automatically finds the workspace root from any subdirectory
 - 📊 **Uses npm-check-updates**: Leverages the powerful npm-check-updates tool under the hood
+- 🖍️ **Colorful Logging**: Beautiful, color-coded log output for info, warnings, errors, and success
 
 ## Installation
 
@@ -52,13 +53,16 @@ bunx depsup
 
 Run in your workspace root or any subdirectory:
 
+depsup
+depsup -y
+depsup --yes
+
 ```bash
 # Interactive mode (default) - choose which dependencies to update
 depsup
 
-# Non-interactive mode - update all dependencies automatically
-depsup -y
-depsup --yes
+# Non-interactive/CI mode - update all dependencies automatically
+depsup --ci
 ```
 
 ## How It Works
@@ -69,7 +73,7 @@ depsup --yes
    - `pnpm-lock.yaml` → pnpm
    - `yarn.lock` → yarn
    - `bun.lock` or `bun.lockb` → bun
-3. **Updates Nx** (if present): Runs `nx migrate latest` and applies migrations automatically
+3. **Updates Nx** (if present): Runs `nx migrate <version>` (default: latest) and applies migrations automatically, with optional commit prefix if `--ci` is enabled
 4. **Updates Root Dependencies**: Updates dependencies in the workspace root `package.json`
 5. **Updates Package Dependencies**: Iterates through all packages in the `packages/` directory (skips if directory doesn't exist)
 6. **Skips Non-Package Directories**: Automatically skips directories without a `package.json`
@@ -83,6 +87,8 @@ depsup --yes
 
 ## Examples
 
+depsup
+depsup --yes
 **Update all dependencies in interactive mode:**
 
 ```bash
@@ -92,7 +98,7 @@ depsup
 **Update all dependencies automatically (CI/CD):**
 
 ```bash
-depsup --yes
+depsup --ci
 ```
 
 ## Building
