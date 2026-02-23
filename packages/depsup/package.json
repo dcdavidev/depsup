@@ -1,0 +1,62 @@
+{
+  "name": "depsup",
+  "version": "0.5.0",
+  "private": false,
+  "description": "A CLI tool to update dependencies in Nx workspaces.",
+  "homepage": "https://github.com/dcdavidev/depsup",
+  "bugs": {
+    "url": "https://github.com/dcdavidev/depsup/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcdavidev/depsup.git"
+  },
+  "license": "MIT",
+  "author": "Davide Di Criscito",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "depsup": "./dist/index.mjs"
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts --format esm --clean --no-dts && tsc -p tsconfig.lib.json",
+    "dev": "tsdown src/index.ts --format esm --watch"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "gradient-string": "^3.0.0",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "tsdown": "^0.20.3",
+    "type-fest": "^5.2.0",
+    "typescript": "5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "nx": {
+    "targets": {
+      "dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "commands": [
+            "pnpm dlx tsx ./packages/depsup/src/index.ts"
+          ]
+        }
+      }
+    }
+  }
+}

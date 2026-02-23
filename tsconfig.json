@@ -1,0 +1,20 @@
+{
+  "extends": "@dcdavidev/tsconfig/node-lib.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "composite": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/depsup"
+    }
+  ]
+}

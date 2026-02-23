@@ -1,28 +1,67 @@
-# spellbookx turbo-morepo-template
+# depsup
 
-This is a starter template for a monorepo using [Turborepo](https://turbo.build/). It comes pre-configured with the excellent [Spellbookx](https://github.com/spellbookx/spellbookx) configurations for linting, formatting, and more, allowing you to bootstrap a new project quickly with solid defaults.
+A powerful CLI tool to update dependencies in Nx workspaces and monorepos automatically.
 
-## Getting Started
+![depsup logo](logo.png)
 
-To create a new repository based on this template, you can use the `create-turbo` command with the `--example` flag, pointing to this GitHub repository.
+## Overview
+
+`depsup` is designed to streamline the dependency update process for modern JavaScript/TypeScript monorepos, with first-class support for Nx workspaces. It handles the complexities of updating Nx itself, running migrations, and then systematically updating all other dependencies across your workspace using `npm-check-updates`.
+
+## Features
+
+- 🚀 **Automatic Nx Updates**: Updates Nx to the latest version and runs migrations automatically (skips if Nx not present).
+- 📦 **Monorepo & Single-Package Support**: Updates dependencies in the workspace root and all packages within the `packages/` directory.
+- 🎯 **Smart Package Manager Detection**: Automatically detects `npm`, `pnpm`, `yarn`, or `bun` based on lock files.
+- 🔄 **Interactive Mode**: Choose which dependencies to update interactively (default).
+- ⚡ **Non-Interactive/CI Mode**: Skip prompts and update all dependencies automatically with the `--ci` flag.
+- 🖍️ **Fancy CLI**: Features a beautiful, color-coded output and a stylish startup logo.
+
+## Quick Start
+
+Run it directly without installation:
 
 ```bash
-npx create-turbo@latest --example https://github.com/spellbookx/turbo-monorepo-template
+npx depsup
+# or
+pnpm dlx depsup
 ```
 
-This will scaffold a new project in a directory of your choice.
+## Usage
 
-## What's Inside?
+```bash
+# Interactive mode (default) - choose which dependencies to update
+depsup
 
-This template sets up a Turborepo monorepo with:
+# Non-interactive/CI mode - update all dependencies automatically
+depsup --ci
 
-- [ESLint](https://eslint.org/) configured using `@spellbookx/eslint-config`.
-- [Prettier](https://prettier.io/) configured using `@spellbookx/prettier-config`.
-- [TypeScript](https://www.typescriptlang.org/) configs based on `@spellbookx/typescript-config`.
-- Commit linting with [Commitlint](https://commitlint.js.org/) and `@spellbookx/commitlint-config`.
-- [CSpell](https://cspell.org/) for spell checking.
-- [Lefthook](https://github.com/evilmartians/lefthook) as a Git hooks manager.
-- [Release It!](https://github.com/release-it/release-it) for automated releases.
+# Specify a custom Nx version to migrate to
+depsup --nxVersion 18.0.0
+```
+
+## Development
+
+This repository is a monorepo managed with [Turborepo](https://turbo.build/) and [pnpm](https://pnpm.io/).
+
+### Tech Stack
+
+- **Build Tool**: [tsdown](https://github.com/rolldown/tsdown) (powered by [Rolldown](https://rolldown.rs/))
+- **Type Checking**: [TypeScript](https://www.typescriptlang.org/)
+- **Monorepo Manager**: [Turborepo](https://turbo.build/)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+- **Linting & Formatting**: [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/) with custom configurations from `@spellbookx`.
+- **Release Management**: [Release It!](https://github.com/release-it/release-it)
+
+### Building
+
+To build the `depsup` package:
+
+```bash
+pnpm run build
+```
+
+This will trigger `turbo run build`, which uses `tsdown` for bundling and `tsc` for type generation.
 
 ## License
 

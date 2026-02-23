@@ -1,0 +1,10 @@
+{
+  "extends": "@dcdavidev/tsconfig/node-lib.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    }
+  ]
+}
