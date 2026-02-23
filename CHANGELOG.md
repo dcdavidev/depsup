@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.10.2](https://github.com/dcdavidev/depsup/compare/v0.10.1...v0.10.2) (2026-02-23)
+
+### Bug Fixes
+
+* workflow and root package name ([798c9e6](https://github.com/dcdavidev/depsup/commit/798c9e67950deadbd79a122853c4fbdff7b79872))
+
 ## [0.10.1](https://github.com/dcdavidev/depsup/compare/v0.6.1...v0.10.1) (2026-02-23)
 
 ## [0.6.1](https://github.com/dcdavidev/depsup/compare/v0.6.0...v0.6.1) (2026-02-23)
