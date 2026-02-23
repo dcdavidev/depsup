@@ -1,6 +1,6 @@
 {
   "name": "depsup",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": false,
   "description": "A CLI tool to update dependencies in Nx workspaces.",
   "homepage": "https://github.com/dcdavidev/depsup",

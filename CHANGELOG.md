@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.6.1](https://github.com/dcdavidev/depsup/compare/v0.6.0...v0.6.1) (2026-02-23)
+
 ## 0.6.0 (2026-02-23)
 
 ### Features
