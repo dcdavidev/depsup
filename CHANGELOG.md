@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.10.3](https://github.com/dcdavidev/depsup/compare/v0.10.2...v0.10.3) (2026-03-02)
+
+### Bug Fixes
+
+* update ascii logo ([ac36e41](https://github.com/dcdavidev/depsup/commit/ac36e417ca6d5ac7acf134964d86bc6edbdcdcac))
+
 ## [0.10.2](https://github.com/dcdavidev/depsup/compare/v0.10.1...v0.10.2) (2026-02-23)
 
 ### Bug Fixes
